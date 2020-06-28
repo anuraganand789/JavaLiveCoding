@@ -1,31 +1,29 @@
 public class CompositionAggregation {
-    class Author{
-        public final Set<Book> listOfBooks = new HashSet<>();
+    class Hydrogen{}
+    class Oxygen {}
+    //Composition
+    class Water{
+        Hydrogen hydrogen = new Hydrongen();
+	Oxygen[] twoOxygen = { new Oxygen(), new Oxygen() };
     }
     
+    //Aggregation
+    class Person{
+        final String name;
+	final int age;
+	final BigInteger UID;
+    }
+
+    //Aggregation
+    //Author can be an entity --> living or machine
+    class Author{
+        java.util.Set<Book> books;
+    }
+    
+    //Composition
     class Book{
-        public Author author;
-        public String name;
-	public int cost;
-	public String ISBN;
+        Author author;
     }
 
-    class ShoppingMall{
-        String nameOfShoppingMall;
-        Set<Person> customers;
-	Set<Person> employedToShoppingMall;
-	Set<Person> employedByShops;
-	Set<Shop>   shopsOnRent;
-	Set<Chairs> chairs;
-    }
-
-    class Shop {
-        String name;
-	int flooNumer;
-	ShoppingMall;
-    }
-
-    public static void main(String ... args) {
-        
-    }
 }
+
