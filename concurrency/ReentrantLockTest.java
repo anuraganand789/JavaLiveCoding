@@ -1,7 +1,7 @@
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-public class LockTest {
+public class ReentrantLockTest {
     final Lock lock = new ReentrantLock();
     private void display(){
         final String threadName = Thread.currentThread().getName();
@@ -33,7 +33,7 @@ public class LockTest {
     }
 
     public static void main(String ... args) throws InterruptedException{
-        final LockTest obj = new LockTest();
+        final ReentrantLockTest obj = new ReentrantLockTest();
 	final Runnable run = obj::displayWithLock;
 
 	final Thread th1 = new Thread(run);
