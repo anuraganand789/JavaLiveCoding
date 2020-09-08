@@ -7,10 +7,16 @@ public final class Singleton{
 
      private Singleton(){}
 
-     public static synchronized Singleton instance(){
-         if(null == singleton) 
-	     singleton = new Singleton();
-
+     // Threads will wait in a queue to read the instance object.
+     //Although, the instance has been already created
+     //public static synchronized Singleton instance(){
+     public static Singleton instance(){
+	 if(null == Singleton) {
+	     synchronized(Singleton.class){
+                 if(null == singleton)
+		     singleton = new Singleton();
+	     }
+	 }
          return singleton;
      }
 }
