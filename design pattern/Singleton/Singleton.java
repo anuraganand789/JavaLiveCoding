@@ -3,7 +3,7 @@ public final class Singleton{
      // and it is not efficient
      //private static final Singleton singleton = new Singleton();
 
-     private static final Singleton singleton; 
+     private static Singleton singleton; 
 
      private Singleton(){}
 
@@ -11,7 +11,7 @@ public final class Singleton{
      //Although, the instance has been already created
      //public static synchronized Singleton instance(){
      public static Singleton instance(){
-	 if(null == Singleton) {
+	 if(null == singleton) {
 	     synchronized(Singleton.class){
                  if(null == singleton)
 		     singleton = new Singleton();
