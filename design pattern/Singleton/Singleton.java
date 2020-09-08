@@ -1,5 +1,5 @@
 public final class Singleton{
-     private final Singleton singleton = new Singleton();
+     private static final Singleton singleton = new Singleton();
 
      private Singleton(){}
 
