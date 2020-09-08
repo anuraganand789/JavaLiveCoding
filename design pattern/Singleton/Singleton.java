@@ -7,8 +7,10 @@ public final class Singleton{
 
      private Singleton(){}
 
-     public static Singleton instance(){
-         if(null == singleton) singleton = new Singleton();
+     public static synchronized Singleton instance(){
+         if(null == singleton) 
+	     singleton = new Singleton();
+
          return singleton;
      }
 }
