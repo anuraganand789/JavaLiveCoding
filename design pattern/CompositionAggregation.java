@@ -1,17 +1,19 @@
+import java.math.BigInteger;
+
 public class CompositionAggregation {
     class Hydrogen{}
     class Oxygen {}
     //Composition
     class Water{
-        Hydrogen hydrogen = new Hydrongen();
+        Hydrogen hydrogen = new Hydrogen();
 	Oxygen[] twoOxygen = { new Oxygen(), new Oxygen() };
     }
     
     //Aggregation
     class Person{
-        final String name;
-	final int age;
-	final BigInteger UID;
+        final String name = "name";
+	final int age = 12;
+	final BigInteger UID = BigInteger.ONE;
     }
 
     //Aggregation
