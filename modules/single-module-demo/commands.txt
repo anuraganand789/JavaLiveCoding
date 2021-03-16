@@ -1,0 +1,9 @@
+//Create a directory with module name in it.
+mkdir -p module-classes/test.module
+
+//Compile
+javac --module-source-path module-source -d module-classes $(find module-source-path -name "*.java")
+
+//Run
+java -p module-classes -m test.module/test.Test
+
