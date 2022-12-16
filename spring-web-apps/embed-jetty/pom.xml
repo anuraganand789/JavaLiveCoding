@@ -17,7 +17,7 @@
     <maven.compiler.source>14</maven.compiler.source>
     <maven.compiler.target>14</maven.compiler.target>
     <jetty.version>10.0.0.beta2</jetty.version>
-    <spring.version>5.2.9.RELEASE</spring.version>
+    <spring.version>5.2.20.RELEASE</spring.version>
   </properties>
 
   <dependencies>
